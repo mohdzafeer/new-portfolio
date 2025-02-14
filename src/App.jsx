@@ -16,7 +16,8 @@ import { SiGeeksforgeeks } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
 import Experience from './components/Experience';
 import Projects from './components/projects/Projects';
-import Skills from './components/skills';
+
+
 
 function App() {
 
