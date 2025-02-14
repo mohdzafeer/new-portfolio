@@ -5,7 +5,7 @@ const Button = () => {
   return (
     <StyledWrapper>
       <button>
-        <span className='font-bold'>Message me</span>
+        <span className='font-bold'>My Resume</span>
       </button>
     </StyledWrapper>
   );
