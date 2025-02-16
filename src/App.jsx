@@ -7,7 +7,6 @@ import instaProfile from '/images/insta-profile.jpg'
 import linkedin from '/images/linkedin.png'
 import leetcode from '/images/leetcode.png'
 import gmail from '/images/gmail.png'
-
 import { useState } from 'react';
 import Button from './components/sendMessageButton';
 import Education from './components/Education';
@@ -16,6 +15,7 @@ import { SiGeeksforgeeks } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
 import Experience from './components/Experience';
 import Projects from './components/projects/Projects';
+import ContactMe from './components/projects/ContactMe';
 
 
 
@@ -35,10 +35,10 @@ function App() {
       <div className='bg-white  min-w-screen min-h-screen xl:px-96 lg:px-72 px-10 md:px-20 pt-10 relative select-none '>
         {/* <div className='  fixed top-0 right-0 m-10 text-white' ><Switch /></div> */}
         {/* <button className=' bg-black fixed top-0 right-0 m-10 text-white px-3 py-2 rounded-lg font-bold cursor-pointer hover:bg-gray-800 duration-200' onClick={() => {setdarkMode(!darkMode),console.log(darkMode)}} >Dark Mode</button> */}
-        <div className='  fixed bottom-0 right-0 m-10 text-white lg:inline-flex hidden' onClick={() =>window.open('https://drive.google.com/drive/folders/1TPF0Ox6rETQhdBzs2XKuygcRGEEaf4uT?usp=drive_link')}><Button  /></div>
-        <div className='w-full bg-blue-500 rounded-2xl py-10 gap-6 flex flex-col justify-center items-center mb-10 shadow-lg select-none '>
+        <div className='  fixed bottom-0 right-0 m-10 text-white lg:inline-flex hidden' onClick={() => window.open('https://drive.google.com/drive/folders/1TPF0Ox6rETQhdBzs2XKuygcRGEEaf4uT?usp=drive_link')}><Button /></div>
+        <div className='w-full bg-blue-500 rounded-2xl py-10 lg:gap-6 gap-1 flex flex-col justify-center items-center mb-10 hover:shadow-xl hover:shadow-blue-200 duration-500'>
           {/* <div className='w-full flex justify-start'><p className='text-sm text-gray-200 font-medium ml-10'>Hello</p></div> */}
-          <div><img src={profile} alt='Profile Image' className='h-60' /></div>
+          <div><img src={profile} alt='Profile Image' className='xl:h-60 lg:h-52 h-40' /></div>
           <div><h1 className='font-bold xl:text-4xl lg:text-2xl text-lg text-white'>Mohammad Zafeer</h1></div>
           <div><h1 className='font-medium lg:text-xl text-sm text-white'>Software Developer and Engineer</h1></div>
         </div>
@@ -52,35 +52,42 @@ function App() {
           <p className='font-bold font-sans lg:text-2xl text-lg'>Connect with Me</p>
         </div>
 
-        <div className='flex xl:flex-row lg:flex-col flex-col gap-10 '>
-          <div className='w-xl bg-black  rounded-2xl py-10 px-10  gap-6 flex flex-col justify-center items-center mb-10 border-2 border-gray-100 cursor-pointer duration-200' onClick={() => window.open('https://github.com/mohdzafeer')}>
+        <div className='flex xl:flex-row lg:flex-col flex-col lg:gap-10 gap-5 '>
+          <div className='lg:w-xl w-full bg-black  rounded-2xl lg:py-10 lg:px-10 px-3 py-2  lg:gap-6 gap-2 flex flex-col justify-center items-center lg:mb-10 mb-0 border-2 border-gray-100 cursor-pointer duration-200' onClick={() => window.open('https://github.com/mohdzafeer')}>
 
-            <div className='flex items-center w-full justify-between'>
-              <div className='p-3 rounded-full bg-white'><SiGithub className='text-3xl' /></div>
-              <div><button className='bg-white text-black font-medium px-3 py-2 rounded-lg cursor-pointer'>Follow</button></div>
+            <div className='flex items-center w-full justify-between '>
+              <div className='flex justify-start lg:gap-4 gap-2 items-center'>
+                <div className='p-3 rounded-full bg-white'>
+                  <SiGithub className='lg:text-3xl text-sm'/>
+                </div>
+                <p className='font-semibold lg:text-lg text-sm text-white'>Gihtub</p>
+              </div>
+              <div className='flex items-center'><button className='bg-white text-black font-medium px-3 py-2 rounded-lg cursor-pointer'>Follow</button></div>
             </div>
             <div className='github commits'>
-              <img src={githubContri} alt='githubContri' className='rounded-lg'></img>
+              <img src={githubContri} alt='githubContri' className='rounded-lg lg:inline-flex hidden'></img>
             </div>
           </div>
 
           <div className='flex flex-col'>
-            <div className='w-xl bg-white  rounded-2xl h-56  px-10  flex flex-col justify-center items-center mb-10 border-2 border-gray-100 cursor-pointer hover:bg-gray-100 duration-200' onClick={() => window.open('https://www.linkedin.com/in/mohammad-zafeer-626a63284/')}>
-              <div className='flex w-full justify-between items-start'>
-                <div><img src={linkedin} alt='insta' className='h-16' /></div>
+            <div className='lg:w-xl w-full bg-white  rounded-2xl lg:h-56 h-full  lg:px-10 px-3 py-2  flex flex-col justify-center items-center lg:mb-10 mb-5 border-2 border-gray-100 cursor-pointer duration-500 hover:border-2 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-200' onClick={() => window.open('https://www.linkedin.com/in/mohammad-zafeer-626a63284/')}>
+              <div className='flex w-full justify-between lg:items-start items-center'>
+                <div><img src={linkedin} alt='insta' className='lg:h-16 h-12' /></div>
                 <div><div className='bg-blue-500 text-white font-medium px-3 py-2 rounded-lg'>Connect</div></div>
               </div>
               <div className='flex w-full justify-between items-center'>
-                <h1 className='username text-gray-700 font-bold text-xl'>Mohammad Zafeer</h1>
-                <img src={instaProfile} alt='insta profile' className='h-24 rounded-full' />
+                <h1 className='username text-gray-700 font-bold text-xl lg:inline-flex hidden'>Mohammad Zafeer</h1>
+                <img src={instaProfile} alt='insta profile' className='h-24 rounded-full lg:inline-flex hidden' />
               </div>
             </div>
-            <div className='w-xl bg-white  rounded-2xl py-5  px-10  flex flex-col justify-center items-center mb-10 border-2 border-gray-100 cursor-pointer hover:bg-gray-100 duration-200' onClick={() =>window.location = 'mailto:mohammadzafeer2610@gmail.com'}>
-              <div className='flex w-full justify-between items-center'>
-                <img src={gmail} alt='insta profile' className='h-20 ' />
+
+
+            <div className='lg:w-xl w-full bg-white  rounded-2xl lg:py-5 py-2  lg:px-10 px-3  flex flex-col justify-center items-center lg:mb-10 mb-5 border-2 border-gray-100 cursor-pointer duration-500 hover:border-2 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-200' onClick={() => window.location = 'mailto:mohammadzafeer2610@gmail.com'}>
+              <div className='flex w-full justify-between items-center gap-6'>
+                <img src={gmail} alt='insta profile' className='lg:h-20 h-12 ' />
                 <div>
-                <h1 className='username text-gray-700 font-bold text-xl'>Mohammad Zafeer</h1>
-                <h1 className='username text-gray-400 font-medium text-sm'>mohammadzafeer2610@gmail.com</h1>
+                  <h1 className='username text-gray-700 font-bold lg:text-xl text-sm'>Mohammad Zafeer</h1>
+                  <h1 className='username text-gray-400 font-medium lg:text-sm text-xs'>mohammadzafeer2610@gmail.com</h1>
                 </div>
               </div>
             </div>
@@ -91,9 +98,9 @@ function App() {
         <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  mb-10 border-gray-100 border-2'>
           <p className='font-bold font-sans lg:text-2xl text-lg'>Experience</p>
         </div>
-        <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  mb-10 border-gray-100 border-2'>
+        <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  mb-10 border-gray-100 border-2 hover:shadow-lg hover:shadow-blue-200 duration-500 hover:border-2 hover:border-blue-300'>
           {/* <p className='font-bold font-sans text-2xl'>Experience</p> */}
-          <Experience/>
+          <Experience />
         </div>
 
         <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  mb-10 border-gray-100 border-2'>
@@ -101,7 +108,7 @@ function App() {
         </div>
 
         <div className='mb-10'>
-          <Projects/>
+          <Projects />
         </div>
 
         {/* <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  mb-10 border-gray-100 border-2'>
@@ -115,35 +122,50 @@ function App() {
         <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  mb-10 border-gray-100 border-2'>
           <p className='font-bold font-sans lg:text-2xl text-lg'>Education</p>
         </div>
-        <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  mb-10 border-gray-100 border-2'>
+
+        <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  mb-10 border-gray-100 border-2 hover:shadow-2xl hover:shadow-blue-200 duration-500 hover:border-2 hover:border-blue-200'>
           {/* <p className='font-bold font-sans text-2xl'>Education</p> */}
-          <Education/>
+          <Education />
         </div>
 
-        
+
+        <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  mb-10 border-gray-100 border-2'>
+          <p className='font-bold font-sans lg:text-2xl text-lg'>Contact Me</p>
+        </div>
+
+        <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  mb-10 border-gray-100 border-2 flex-col duration-500 hover:shadow-blue-200 hover:shadow-2xl  hover:border-blue-300'>
+          <p className='lg:text-sm md:text-sm text-xs text-gray-500 font-medium'>Contact me</p>
+          <ContactMe />
+        </div>
+
 
         <div className='w-full bg-gray-100 rounded-2xl py-5 px-10  gap-6 flex flex-col   items-center  mb-10 border-gray-100 border-2'>
           <div className='w-full flex justify-start'><p className='text-sm text-gray-500 font-medium'>Follow me</p></div>
           <div className='flex items-center gap-8 justify-center w-full  text-xs '>
-            <div className='flex flex-col items-center gap-0 cursor-pointer ' onClick={()=>window.open('https://www.instagram.com/__mohd_zafeer__/')}>
-              <FaInstagram className='h-12 cursor-pointer lg:text-2xl text-lg'/>
+            <div className='flex flex-col items-center gap-0 cursor-pointer ' onClick={() => window.open('https://www.instagram.com/__mohd_zafeer__/')}>
+              <FaInstagram className='h-12 cursor-pointer lg:text-2xl text-lg' />
               <p className='text-gray-500 font-medium cursor-pointer hover:text-gray-600 duration-200'>Instagram</p>
             </div>
-            <div className='flex flex-col items-center gap-0 cursor-pointer' onClick={()=>window.open('https://github.com/mohdzafeer')}>
-              <SiGithub className='h-12 cursor-pointer lg:text-2xl text-lg'/>
-              <p className='text-gray-500 font-medium cursor-pointer hover:text-gray-600 duration-200'>Instagram</p>
+            <div className='flex flex-col items-center gap-0 cursor-pointer' onClick={() => window.open('https://github.com/mohdzafeer')}>
+              <SiGithub className='h-12 cursor-pointer lg:text-2xl text-lg' />
+              <p className='text-gray-500 font-medium cursor-pointer hover:text-gray-600 duration-200'>Github</p>
             </div>
-            <div className='flex flex-col items-center gap-0 cursor-pointer' onClick={()=>window.open('https://www.geeksforgeeks.org/user/mohammadzafeer2610/')}>
-              <SiGeeksforgeeks className='h-12 cursor-pointer lg:text-2xl text-lg'/>
-              <p className='text-gray-500 font-medium cursor-pointer hover:text-gray-600 duration-200'>Instagram</p>
+            <div className='flex flex-col items-center gap-0 cursor-pointer' onClick={() => window.open('https://www.geeksforgeeks.org/user/mohammadzafeer2610/')}>
+              <SiGeeksforgeeks className='h-12 cursor-pointer lg:text-2xl text-lg' />
+              <p className='text-gray-500 font-medium cursor-pointer hover:text-gray-600 duration-200'>GFG</p>
             </div>
-            <div className='flex flex-col items-center gap-0 cursor-pointer' onClick={()=>window.open('https://leetcode.com/u/zafeer2610/')}>
-              <SiLeetcode className='h-12 cursor-pointer lg:text-2xl text-lg'/>
-              <p className='text-gray-500 font-medium cursor-pointer hover:text-gray-600 duration-200'>Instagram</p>
+            <div className='flex flex-col items-center gap-0 cursor-pointer' onClick={() => window.open('https://leetcode.com/u/zafeer2610/')}>
+              <SiLeetcode className='h-12 cursor-pointer lg:text-2xl text-lg' />
+              <p className='text-gray-500 font-medium cursor-pointer hover:text-gray-600 duration-200'>Leetcode</p>
             </div>
-            
+
+          </div>
+          <div className='justify-center'>
+            <p className='lg:text-sm text-xs text-gray-500 font-normal mt-5 text-center'>All right reserved &copy; Mohammad Zafeer</p>
           </div>
         </div>
+
+
       </div>
 
     </div>
