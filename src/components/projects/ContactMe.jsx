@@ -1,12 +1,13 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import Swal from 'sweetalert2'
 
 const ContactMe = () => {
-
+    const [loading, setLoading] = useState(false)
     const onSubmit = async (event) => {
+        
         event.preventDefault();
-
+        setLoading(true)
         const formData = new FormData(event.target);
 
         formData.append("access_key", "5f35ad34-00db-4908-b0fa-24de052cc16c");
@@ -19,6 +20,7 @@ const ContactMe = () => {
         const data = await response.json();
 
         if (data.success) {
+            setLoading(false)
             Swal.fire({
                 position: "top-end",
                 icon: "success",
@@ -29,6 +31,7 @@ const ContactMe = () => {
 
             event.target.reset();
         } else {
+            setLoading(false)
             console.log("Error", data);
 
         }
@@ -53,7 +56,7 @@ const ContactMe = () => {
                     <textarea className='w-full my-3 rounded-lg lg:text-xl text-sm px-3 py-2 shadow-lg bg-gray-100 ' placeholder='Enter Your Message please' required id='message' name='message' />
                 </div>
                 <div className='flex justify-center'>
-                    <button type='submit' className='lg:text-xl text-sm font-semibold px-4 py-3 rounded-lg bg-blue-500 text-white w-fit mt-5 cursor-pointer hover:shadow-lg hover:shadow-blue-300 duration-200 hover:bg-blue-600'>Send Message</button>
+                    <button type='submit' className='lg:text-xl text-sm font-semibold px-4 py-3 rounded-lg bg-blue-500 text-white w-fit mt-5 cursor-pointer hover:shadow-lg hover:shadow-blue-300 duration-200 hover:bg-blue-600'>{loading ? 'Sending...' : 'Send Message'}</button>
                 </div>
             </form>
 

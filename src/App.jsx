@@ -30,7 +30,7 @@ function App() {
   return (
 
 
-    <div className='overflow-x-hidden'>
+    <div className='overflow-x-hidden scroll-smooth'>
 
       <div className='bg-white  min-w-screen min-h-screen xl:px-96 lg:px-72 px-10 md:px-20 pt-10 relative select-none '>
         {/* <div className='  fixed top-0 right-0 m-10 text-white' ><Switch /></div> */}
@@ -139,7 +139,7 @@ function App() {
         </div>
 
 
-        <div className='w-full bg-gray-100 rounded-2xl py-5 px-10  gap-6 flex flex-col   items-center  lg:mb-10 mb-5 border-gray-100 border-2'>
+        <div className='w-full bg-gray-100 rounded-2xl py-5 px-10  gap-6 flex flex-col   items-center  lg:mb-10 mb-5 border-gray-100 border-2 '>
           <div className='w-full flex justify-start'><p className='text-sm text-gray-500 font-medium'>Follow me</p></div>
           <div className='flex items-center gap-8 justify-center w-full  text-xs '>
             <div className='flex flex-col items-center gap-0 cursor-pointer ' onClick={() => window.open('https://www.instagram.com/__mohd_zafeer__/')}>
