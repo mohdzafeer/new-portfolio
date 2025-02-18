@@ -16,37 +16,57 @@ import { SiLeetcode } from "react-icons/si";
 import Experience from './components/Experience';
 import Projects from './components/projects/Projects';
 import ContactMe from './components/projects/ContactMe';
+import {motion} from 'motion/react'
 
 
 
 function App() {
 
   const [darkMode, setdarkMode] = useState(false);
-  // const changeDarkMode = () => {
-  //   setdarkMode(!darkMode);
-  //   // console.log(darkMode);
-  // }
+  
 
   return (
 
 
     <div className='overflow-x-hidden scroll-smooth'>
 
-      <div className='bg-white  min-w-screen min-h-screen xl:px-96 lg:px-72 px-10 md:px-20 pt-10 relative select-none '>
+      <div className='bg-white  min-w-screen min-h-screen xl:px-96 lg:px-72 px-10 md:px-20 lg:pt-10 pt-5 relative select-none '>
         {/* <div className='  fixed top-0 right-0 m-10 text-white' ><Switch /></div> */}
         {/* <button className=' bg-black fixed top-0 right-0 m-10 text-white px-3 py-2 rounded-lg font-bold cursor-pointer hover:bg-gray-800 duration-200' onClick={() => {setdarkMode(!darkMode),console.log(darkMode)}} >Dark Mode</button> */}
         <div className='  fixed bottom-0 right-0 m-10 text-white lg:inline-flex hidden' onClick={() => window.open('https://drive.google.com/drive/folders/1TPF0Ox6rETQhdBzs2XKuygcRGEEaf4uT?usp=drive_link')}><Button /></div>
-        <div className='w-full bg-blue-500 rounded-2xl py-10 lg:gap-6 gap-1 flex flex-col justify-center items-center mb-10 hover:shadow-xl hover:shadow-blue-200 duration-500'>
+        <motion.div 
+        initial={{
+          opacity:0
+        }}
+        animate={{
+          opacity:1,
+          transition:{duration:1 , ease:'easeInOut'}
+        }}
+        whileHover={{
+          y:-10,
+          transition:{duration:0.1 , ease:'linear'},
+          
+      }}
+        className='w-full bg-blue-500 rounded-2xl py-10 lg:gap-6 gap-1 flex flex-col justify-center items-center mb-10 hover:shadow-xl hover:shadow-blue-200 duration-500'>
           {/* <div className='w-full flex justify-start'><p className='text-sm text-gray-200 font-medium ml-10'>Hello</p></div> */}
           <div><img src={profile} alt='Profile Image' className='xl:h-60 lg:h-52 h-40' /></div>
           <div><h1 className='font-bold xl:text-4xl lg:text-2xl text-xl text-white'>Mohammad Zafeer</h1></div>
           <div><h1 className='font-medium lg:text-xl text-sm text-white'>Software Developer and Engineer</h1></div>
-        </div>
+        </motion.div>
 
-        <div className='w-full bg-gray-100 rounded-2xl py-10 px-10  gap-6 flex flex-col justify-center items-start mb-10 '>
+        <motion.div 
+        initial={{
+          opacity:0
+        }}
+        animate={{
+          opacity:1,
+          transition:{duration:1 , ease:'easeInOut'}
+        }}
+        
+        className='w-full bg-gray-100 rounded-2xl py-10 px-10  gap-6 flex flex-col justify-center items-start lg:mb-10 mb-5 '>
           <p className='lg:text-sm md:text-sm text-xs text-gray-500 font-medium'>About me</p>
           <p className='font-medium lg:text-lg text-sm font-sans'>I am a Full-Stack MERN Developer passionate about building dynamic, scalable, and user-friendly web applications. With expertise in React.js, Node.js, Express.js, and MongoDB, I develop seamless front-end experiences and robust back-end architectures. My skills extend to authentication (JWT, Firebase, Next-Auth), payment integration (Stripe), and real-time features using WebSockets and Firebase. I have worked on diverse projects, including social media platforms, e-commerce sites, and Chrome extensions, always focusing on clean, maintainable code and intuitive user experiences.</p>
-        </div>
+        </motion.div>
 
         <div className='w-full bg-white rounded-2xl lg:py-5 lg:px-10 px-5 py-3  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2'>
           <p className='font-bold font-sans lg:text-2xl text-lg'>Connect with Me</p>
@@ -64,8 +84,8 @@ function App() {
               </div>
               <div className='flex items-center'><button className='bg-white text-black font-medium px-3 py-2 rounded-lg cursor-pointer'>Follow</button></div>
             </div>
-            <div className='github commits'>
-              <img src={githubContri} alt='githubContri' className='rounded-lg lg:inline-flex hidden'></img>
+            <div className='github commits lg:inline-flex hidden'>
+              <img src={githubContri} alt='githubContri' className='rounded-lg '></img>
             </div>
           </div>
 
@@ -84,7 +104,7 @@ function App() {
 
             <div className='lg:w-xl w-full bg-white  rounded-2xl lg:py-5 py-2  lg:px-10 px-3  flex flex-col justify-center items-center lg:mb-10 mb-5 border-2 border-gray-100 cursor-pointer duration-500 hover:border-2 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-200' onClick={() => window.location = 'mailto:mohammadzafeer2610@gmail.com'}>
               <div className='flex w-full justify-between items-center gap-6'>
-                <img src={gmail} alt='insta profile' className='lg:h-20 h-12 ' />
+                <img src={gmail} alt='insta profile' className='lg:h-20 h-8 ' />
                 <div>
                   <h1 className='username text-gray-700 font-bold lg:text-xl text-sm'>Mohammad Zafeer</h1>
                   <h1 className='username text-gray-400 font-medium lg:text-sm text-xs'>mohammadzafeer2610@gmail.com</h1>
@@ -133,13 +153,31 @@ function App() {
           <p className='font-bold font-sans lg:text-2xl text-lg'>Contact Me</p>
         </div>
 
-        <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2 flex-col duration-500 hover:shadow-blue-200 hover:shadow-2xl  hover:border-blue-300'>
+        <motion.div 
+        initial={{
+          opacity: 0,
+          x:-100
+        }}
+        whileInView={{
+          opacity: 1,
+          x:0,
+          transition: { duration: 0.5 ,ease:'linear'},
+        }}
+        className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2 flex-col duration-500 hover:shadow-blue-200 hover:shadow-2xl  hover:border-blue-300'>
           <p className='lg:text-sm md:text-sm text-xs text-gray-500 font-medium'>Contact me</p>
           <ContactMe />
-        </div>
+        </motion.div>
 
 
-        <div className='w-full bg-gray-100 rounded-2xl py-5 px-10  gap-6 flex flex-col   items-center  lg:mb-10 mb-5 border-gray-100 border-2 '>
+        <motion.div 
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+          transition: { duration: 1 ,ease:'easeIn'},
+        }}
+        className='w-full bg-gray-100 rounded-2xl py-5 px-10  gap-6 flex flex-col   items-center  lg:mb-10 mb-5 border-gray-100 border-2 '>
           <div className='w-full flex justify-start'><p className='text-sm text-gray-500 font-medium'>Follow me</p></div>
           <div className='flex items-center gap-8 justify-center w-full  text-xs '>
             <div className='flex flex-col items-center gap-0 cursor-pointer ' onClick={() => window.open('https://www.instagram.com/__mohd_zafeer__/')}>
@@ -161,9 +199,9 @@ function App() {
 
           </div>
           <div className='justify-center'>
-            <p className='lg:text-sm text-xs text-gray-500 font-normal mt-5 text-center'>All right reserved &copy; Mohammad Zafeer</p>
+            <p className='lg:text-sm text-xs text-gray-500 font-normal mt-5 text-center'>All Rights Reserved &copy; 2025 Mohammad Zafeer</p>
           </div>
-        </div>
+        </motion.div>
 
 
       </div>

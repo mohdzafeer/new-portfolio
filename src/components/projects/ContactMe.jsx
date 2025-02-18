@@ -1,11 +1,13 @@
 
 import React, { useState } from 'react'
 import Swal from 'sweetalert2'
+import { motion } from 'motion/react'
+import Input from '../Input'
 
 const ContactMe = () => {
     const [loading, setLoading] = useState(false)
     const onSubmit = async (event) => {
-        
+
         event.preventDefault();
         setLoading(true)
         const formData = new FormData(event.target);
@@ -27,7 +29,7 @@ const ContactMe = () => {
                 title: "Message sent successfully",
                 showConfirmButton: false,
                 timer: 2000
-              });
+            });
 
             event.target.reset();
         } else {
@@ -38,25 +40,46 @@ const ContactMe = () => {
     };
 
     return (
-        <div>
+        <div
+        >
 
             <form className='flex flex-col' onSubmit={onSubmit}>
-                <div className='flex flex-col'>
-                    <div className='flex gap-6 lg:flex-row flex-col'>
+                <input type="hidden" name="subject" value="New message on zafeer.in" />
+                <input type="hidden" name="from_name" value="ZAFEER.IN"></input>
+
+                
+                <div className='flex flex-col lg:gap-6 gap-3'>
+                    <div className='flex lg:gap-6 gap-3 lg:flex-row flex-col'>
                         <div className='lg:w-1/2 w-full'>
-                            <label className='lg:text-xl text-sm font-bold text-black' htmlFor='name'>Name</label>
-                            <input type='text' className='w-full my-3 rounded-lg lg:text-xl text-sm px-3 py-2 shadow-lg bg-gray-100 border-transparent' placeholder='Enter Your Name please' required id='name' name='name' />
+                            <label className='lg:text-xl text-sm font-bold text-black ml-3' htmlFor='name'>Name</label>
+                            <input type='text' className='w-full my-3 rounded-lg lg:text-xl text-sm px-3 py-2 shadow-lg bg-gray-100 outline-none' placeholder='Enter Your Name please' required id='name' name='name' />
                         </div>
                         <div className='w-full'>
-                            <label className='lg:text-xl text-sm font-bold text-black' htmlFor='email'>Email</label>
-                            <input type='email' className='w-full my-3 rounded-lg lg:text-xl text-sm px-3 py-2 shadow-lg bg-gray-100 ' placeholder='Enter Your E-Mail please' required id='email' name='email' />
+                            <label className='lg:text-xl text-sm font-bold text-black ml-3' htmlFor='email'>Email</label>
+                            <input type='email' className='w-full my-3 rounded-lg lg:text-xl text-sm px-3 py-2 shadow-lg bg-gray-100 outline-none' placeholder='Enter Your E-Mail please' required id='email' name='email' />
                         </div>
                     </div>
-                    <label className='lg:text-xl text-sm font-bold text-black' htmlFor='message'>Message</label>
-                    <textarea className='w-full my-3 rounded-lg lg:text-xl text-sm px-3 py-2 shadow-lg bg-gray-100 ' placeholder='Enter Your Message please' required id='message' name='message' />
+                    <label className='lg:text-xl text-sm font-bold text-black ml-3' htmlFor='message'>Message</label>
+                    <textarea className='w-full mb-3 rounded-lg lg:text-xl text-sm px-3 py-2 shadow-lg bg-gray-100 outline-none ' placeholder='Enter Your Message please' required id='message' name='message' />
                 </div>
+                
+                
+                {/* <Input/> */}
+                
+                
                 <div className='flex justify-center'>
-                    <button type='submit' className='lg:text-xl text-sm font-semibold px-4 py-3 rounded-lg bg-blue-500 text-white w-fit mt-5 cursor-pointer hover:shadow-lg hover:shadow-blue-300 duration-200 hover:bg-blue-600'>{loading ? 'Sending...' : 'Send Message'}</button>
+                    {loading ? 
+                    <button
+                    
+
+                     className='lg:text-xl text-sm font-semibold px-4 py-3 rounded-lg bg-gray-500 text-white w-fit mt-5 cursor-not-allowed  newclass '>Sending...</button> 
+                    :
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+
+                        type='submit' className='lg:text-xl text-sm font-semibold px-4 py-3 rounded-lg bg-blue-500 text-white w-fit mt-5 cursor-pointer hover:shadow-lg hover:shadow-blue-300 duration-200 hover:bg-blue-600'>{loading ? 'Sending...' : 'Send Message'}</motion.button>    
+                }
                 </div>
             </form>
 
