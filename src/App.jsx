@@ -36,15 +36,17 @@ function App() {
         <div className='  fixed bottom-0 right-0 m-10 text-white lg:inline-flex hidden' onClick={() => window.open('https://drive.google.com/drive/folders/1TPF0Ox6rETQhdBzs2XKuygcRGEEaf4uT?usp=drive_link')}><Button /></div>
         <motion.div 
         initial={{
-          opacity:0
+          opacity:0,
+          y:-100
         }}
         animate={{
           opacity:1,
-          transition:{duration:1 , ease:'easeInOut'}
+          y:0,
+          transition:{duration:0.2 , ease:'easeInOut'}
         }}
         whileHover={{
           y:-10,
-          transition:{duration:0.1 , ease:'linear'},
+          transition:{duration:0.2 , ease:'linear'},
           
       }}
         className='w-full bg-blue-500 rounded-2xl py-10 lg:gap-6 gap-1 flex flex-col justify-center items-center mb-10 hover:shadow-xl hover:shadow-blue-200 duration-500'>
