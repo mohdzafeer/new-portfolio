@@ -12,11 +12,9 @@ const Projects = () => {
                         return <motion.div 
                         initial={{
                             transition:{duration:0.1},
-                            opacity: 0,
-                            
+                            y:0
                         }}
                         whileInView={{
-                            opacity: 1,
                             
                             transition:{duration:1, ease:'linear'}
                         }}
