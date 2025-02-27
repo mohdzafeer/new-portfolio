@@ -151,7 +151,7 @@ function App() {
         <div className='w-full bg-white rounded-2xl lg:py-5 py-3 lg:px-10 px-5  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2'>
           <p className='font-bold font-sans lg:text-2xl text-lg'>Experience</p>
         </div>
-        <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  mb-10 border-gray-100 border-2 hover:shadow-lg hover:shadow-blue-200 duration-500 hover:border-2 hover:border-blue-300'>
+        <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2 hover:shadow-lg hover:shadow-blue-200 duration-500 hover:border-2 hover:border-blue-300'>
           {/* <p className='font-bold font-sans text-2xl'>Experience</p> */}
           <Experience />
         </div>
