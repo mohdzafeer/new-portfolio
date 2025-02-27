@@ -23,10 +23,10 @@ const Projects = () => {
                             transition:{duration:0.1 , ease:'linear'},
                             
                         }}
-                        className="w-full rounded-xl border-2 border-gray-100 py-3 m-0 flex flex-col items-center justify-center gap-6 px-3 hover:border-2 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-200 duration-500 cursor-pointer">
+                        className="w-full rounded-xl border-2 border-gray-100 py-3 m-0 flex flex-col items-center justify-center gap-6 px-3 hover:border-2 hover:bg-blue-100 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-200 duration-500 cursor-pointer">
                                 <img src={data.image} className='rounded-xl  mx-3 border-2 border-gray-200'/>
                                 <h1 className='text-lg font-bold text-center'>{data.name}</h1>
-                                <p className='text-sm font-medium text-gray-500 '>{data.desc}</p>
+                                <p className='text-sm font-medium text-gray-500 text-center'>{data.desc}</p>
                                 <button className='px-3 py-2 bg-blue-500 text-white font-bold rounded-lg cursor-pointer hover:bg-blue-700 duration-300 active:bg-blue-400' onClick={()=>window.open(data.link)}>Try Live</button>
                             </motion.div>
                     })}

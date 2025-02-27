@@ -10,7 +10,7 @@ const Experience = () => {
                     </svg>
                 </span>
                 <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 da\rk:text-white">Web-Dev Intern at NULL CLASS</h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 da\rk:text-gray-500">June 2018 - July2018</time>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 da\rk:text-gray-500">June 2018 - July 2018</time>
                 <a class="mb-4 text-base font-medium text-gray-500 da\rk:text-gray-300 hover:text-gray-700 duration-200 italic cursor-pointer" href='https://www.nullclass.com/certificates/66994b7e9b4b7a55ef60c796'>Certificate</a>
             </li>
             

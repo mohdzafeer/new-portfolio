@@ -15,9 +15,9 @@ const Skill = () => {
                         transition: { duration: 0.1, ease: 'linear' },
 
                     }}
-                    className='flex flex-col items-center justify-center gap-4 border-2 border-gray-200 py-3 rounded-lg hover:bg-gray-100 hover:border-2 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-200 duration-500  active:bg-blue-100'>
+                    className='flex flex-col items-center justify-center gap-4 border-2 border-gray-100 py-3 rounded-xl hover:bg-blue-100 hover:border-2 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-200 duration-500  active:bg-blue-100'>
                     <img src={data.image} alt={data.name} className='rounded-full h-20' />
-                    <h2 className='font-semibold text-xl align-middle text-black'>{data.name}</h2>
+                    <h2 className='font-semibold text-sm lg:text-lg align-middle text-gray-500'>{data.name}</h2>
                 </motion.div>)
             })}
         </div>

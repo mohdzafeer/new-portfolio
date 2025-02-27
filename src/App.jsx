@@ -29,7 +29,7 @@ function App() {
   return (
 
 
-    <div className='overflow-x-hidden scroll-smooth'>
+    <div className='overflow-x-hidden scroll-smooth '>
 
       <div className='bg-white  min-w-screen min-h-screen xl:px-96 lg:px-72 px-10 md:px-20 lg:pt-10 pt-5 relative select-none '>
         {/* <div className='  fixed top-0 right-0 m-10 text-white' ><Switch /></div> */}
@@ -86,7 +86,7 @@ function App() {
               transition: { duration: 0.2, ease: 'linear' },
 
             }}
-            className='lg:w-xl w-full bg-black  rounded-2xl lg:py-10 lg:px-10 px-3 py-2  lg:gap-6 gap-2 flex flex-col justify-center items-center lg:mb-10 mb-0 border-2 border-gray-100 cursor-pointer duration-200' onClick={() => window.open('https://github.com/mohdzafeer')}>
+            className='lg:w-xl w-full bg-black  rounded-2xl lg:py-10 lg:px-10 px-3 py-2  lg:gap-6 gap-2 flex flex-col justify-center items-center lg:mb-10 mb-0 border-2 border-gray-100 cursor-pointer duration-200 ' onClick={() => window.open('https://github.com/mohdzafeer')}>
 
             <div className='flex items-center w-full justify-between '>
               <div className='flex justify-start lg:gap-4 gap-2 items-center'>
@@ -113,7 +113,7 @@ function App() {
                 transition: { duration: 0.1, ease: 'linear' },
 
               }}
-              className='lg:w-xl w-full bg-white  rounded-2xl lg:h-56 h-full  lg:px-10 px-3 py-2  flex flex-col justify-center items-center lg:mb-10 mb-5 border-2 border-gray-100 cursor-pointer duration-500 hover:border-2 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-200' onClick={() => window.open('https://www.linkedin.com/in/mohammad-zafeer-626a63284/')}>
+              className='lg:w-xl w-full bg-white  rounded-2xl lg:h-56 h-full  lg:px-10 px-3 py-2  flex flex-col justify-center items-center lg:mb-10 mb-5 border-2 border-gray-100 cursor-pointer duration-500 hover:border-2 hover:border-blue-300 hover:bg-blue-100 hover:shadow-lg hover:shadow-blue-200' onClick={() => window.open('https://www.linkedin.com/in/mohammad-zafeer-626a63284/')}>
               <div className='flex w-full justify-between lg:items-start items-center'>
                 <div><img src={linkedin} alt='insta' className='lg:h-16 h-12' /></div>
                 <div><div className='bg-blue-500 text-white font-medium px-3 py-2 rounded-lg'>Connect</div></div>
@@ -135,7 +135,7 @@ function App() {
                 transition: { duration: 0.1, ease: 'linear' },
 
               }}
-              className='lg:w-xl w-full bg-white  rounded-2xl lg:py-5 py-2  lg:px-10 px-3  flex flex-col justify-center items-center lg:mb-10 mb-5 border-2 border-gray-100 cursor-pointer duration-500 hover:border-2 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-200' onClick={() => window.location = 'mailto:mohammadzafeer2610@gmail.com'}>
+              className='lg:w-xl w-full bg-white  rounded-2xl lg:py-5 py-2  lg:px-10 px-3  flex flex-col justify-center items-center lg:mb-10 mb-5 border-2 border-gray-100 cursor-pointer duration-500 hover:border-2 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-200 hover:bg-blue-100' onClick={() => window.location = 'mailto:mohammadzafeer2610@gmail.com'}>
               <div className='flex w-full justify-between items-center gap-6'>
                 <img src={gmail} alt='insta profile' className='lg:h-20 h-8 ' />
                 <div>
