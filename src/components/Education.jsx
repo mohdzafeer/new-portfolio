@@ -22,7 +22,7 @@ const Education = () => {
                 </span>
                 <h3 class="mb-1 text-lg font-semibold text-gray-900 da\rk:text-white">Sayyid Hamid Senior Secondary School, AMU</h3>
                 <time class="block mb-2 text-sm font-normal leading-none text-gray-400 da\rk:text-gray-500">2018-2020</time>
-                <p class="text-base font-normal text-gray-500 da\rk:text-gray-400">Intermidiate (PCM - 78.4%)</p>
+                <p class="text-base font-normal text-gray-500 da\rk:text-gray-400">Intermediate (PCM - 78.4%)</p>
             </li>
             <li class="ms-6">
                 <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-black da\rk:ring-gray-900 da\rk:bg-blue-900">
