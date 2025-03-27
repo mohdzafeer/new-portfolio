@@ -5,6 +5,8 @@ import quizapp from '/images/quizapp.png'
 import netflix from '/images/netflix.png'
 import cryptofriend from '/images/cryptofriend.png'
 import npm from '/images/npm.png'
+import handimart from '/images/handimart.jpg'
+import portfolio from '/images/portfolio.png'
 
 
 export const projectdata=[
@@ -45,7 +47,18 @@ export const projectdata=[
         desc:'Created this simple npm package with Node.js which simply gives a random integer value between 0 and 9',
         link:'https://www.npmjs.com/package/random-integer-zerotonine?activeTab=readme',
     },
-    
+    {
+        image:handimart,
+        name:'Handmart, E-Commerce Shopify Store',
+        desc:'Created this stunning shopify store also added custom section using HTML CSS and JS',
+        link:'https://www.handimarts.com',
+    },
+    {
+        image:portfolio,
+        name:'Portfolio site',
+        desc:'Created this responsive portfolio site using React and Tailwind',
+        link:'https://portfolio-nine-rust-42.vercel.app/',
+    },
     
     
 ]
