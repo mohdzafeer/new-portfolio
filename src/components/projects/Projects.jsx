@@ -10,13 +10,16 @@ const Projects = () => {
                 <StyledWrapper className='grid xl:grid-cols-3 xl:gap-10 lg:grid-cols-2 lg:gap-5 gap-3 grid-cols-1 '>
                     {projectdata.map((data) => {
                         return <motion.div 
+                        
+
                         initial={{
                             transition:{duration:0.1},
-                            y:0
+                            y:0,
+                            scale:0.7
                         }}
                         whileInView={{
-                            
-                            transition:{duration:1, ease:'linear'}
+                            scale:1,
+                            transition:{duration:0.5, ease:'linear'}
                         }}
                         whileHover={{
                             y:-10,

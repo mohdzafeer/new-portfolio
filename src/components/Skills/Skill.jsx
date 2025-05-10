@@ -8,7 +8,13 @@ const Skill = () => {
                 return (<motion.div
                     initial={{
                         transition: { duration: 0.1 },
-
+                        scale:0.5,
+                        opacity:0,
+                    }}
+                    whileInView={{
+                        scale:1,
+                        opacity:1,
+                        transition:{duration:0.5,ease:'linear'}
                     }}
                     whileHover={{
                         y: -10,

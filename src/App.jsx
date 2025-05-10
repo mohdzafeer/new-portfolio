@@ -18,12 +18,14 @@ import Projects from './components/projects/Projects';
 import ContactMe from './components/projects/ContactMe';
 import { motion } from 'motion/react'
 import Skill from './components/Skills/Skill';
+import { easeIn } from 'motion';
 
 
 
 function App() {
 
-
+  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
+  const [showTooltip, setShowTooltip] = useState(false);
 
 
   return (
@@ -79,7 +81,13 @@ function App() {
           <motion.div
             initial={{
               transition: { duration: 0.2 },
-
+              scale: 0.5,
+              opacity: 0
+            }}
+            whileInView={{
+              scale: 1,
+              transition: { duration: 0.5, ease: 'linear' },
+              opacity: 1
             }}
             whileHover={{
               y: -10,
@@ -105,12 +113,18 @@ function App() {
           <div className='flex flex-col'>
             <motion.div
               initial={{
-                transition: { duration: 0.1 },
-
+                transition: { duration: 0.2 },
+                scale: 0.5,
+                opacity: 0
+              }}
+              whileInView={{
+                scale: 1,
+                transition: { duration: 0.5, ease: 'linear' },
+                opacity: 1
               }}
               whileHover={{
                 y: -10,
-                transition: { duration: 0.1, ease: 'linear' },
+                transition: { duration: 0.2, ease: 'linear' },
 
               }}
               className='lg:w-xl w-full bg-white  rounded-2xl lg:h-56 h-full  lg:px-10 px-3 py-2  flex flex-col justify-center items-center lg:mb-10 mb-5 border-2 border-gray-100 cursor-pointer duration-500 hover:border-2 hover:border-blue-300 hover:bg-blue-100 hover:shadow-lg hover:shadow-blue-200' onClick={() => window.open('https://www.linkedin.com/in/mohammad-zafeer-626a63284/')}>
@@ -127,12 +141,18 @@ function App() {
 
             <motion.div
               initial={{
-                transition: { duration: 0.1 },
-
+                transition: { duration: 0.2 },
+                scale: 0.5,
+                opacity: 0
+              }}
+              whileInView={{
+                scale: 1,
+                transition: { duration: 0.5, ease: 'linear' },
+                opacity: 1
               }}
               whileHover={{
                 y: -10,
-                transition: { duration: 0.1, ease: 'linear' },
+                transition: { duration: 0.2, ease: 'linear' },
 
               }}
               className='lg:w-xl w-full bg-white  rounded-2xl lg:py-5 py-2  lg:px-10 px-3  flex flex-col justify-center items-center lg:mb-10 mb-5 border-2 border-gray-100 cursor-pointer duration-500 hover:border-2 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-200 hover:bg-blue-100' onClick={() => window.location = 'mailto:mohammadzafeer2610@gmail.com'}>
@@ -151,10 +171,26 @@ function App() {
         <div className='w-full bg-white rounded-2xl lg:py-5 py-3 lg:px-10 px-5  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2'>
           <p className='font-bold font-sans lg:text-2xl text-lg'>Experience</p>
         </div>
-        <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2 hover:shadow-lg hover:shadow-blue-200 duration-500 hover:border-2 hover:border-blue-300'>
+        <motion.div
+          initial={{
+            transition: { duration: 0.2 },
+            scale: 0.5,
+            opacity: 0
+          }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 0.5, ease: 'linear' },
+            opacity: 1
+          }}
+          whileHover={{
+            y: -10,
+            transition: { duration: 0.2, ease: 'linear' },
+
+          }}
+          className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2 hover:shadow-lg hover:shadow-blue-200 duration-500 hover:border-2 hover:border-blue-300'>
           {/* <p className='font-bold font-sans text-2xl'>Experience</p> */}
           <Experience />
-        </div>
+        </motion.div>
 
         <div className='w-full bg-white rounded-2xl lg:py-5 py-3 lg:px-10 px-5  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2'>
           <p className='font-bold font-sans lg:text-2xl text-lg'>Projects</p>
@@ -176,10 +212,26 @@ function App() {
           <p className='font-bold font-sans lg:text-2xl text-lg'>Education</p>
         </div>
 
-        <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2 hover:shadow-2xl hover:shadow-blue-200 duration-500 hover:border-2 hover:border-blue-200'>
+        <motion.div
+          initial={{
+            transition: { duration: 0.2 },
+            scale: 0.5,
+            opacity: 0
+          }}
+          whileInView={{
+            scale: 1,
+            transition: { duration: 0.5, ease: 'linear' },
+            opacity: 1
+          }}
+          whileHover={{
+            y: -10,
+            transition: { duration: 0.2, ease: 'linear' },
+
+          }}
+          className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2 hover:shadow-2xl hover:shadow-blue-200 duration-500 hover:border-2 hover:border-blue-200'>
           {/* <p className='font-bold font-sans text-2xl'>Education</p> */}
           <Education />
-        </div>
+        </motion.div>
 
 
         <div className='w-full bg-white rounded-2xl lg:py-5 py-3 lg:px-10 px-5 gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2'>
@@ -188,13 +240,19 @@ function App() {
 
         <motion.div
           initial={{
-            opacity: 0,
-            x: -100
+            transition: { duration: 0.2 },
+            scale: 0.5,
+            opacity: 0
           }}
           whileInView={{
-            opacity: 1,
-            x: 0,
+            scale: 1,
             transition: { duration: 0.5, ease: 'linear' },
+            opacity: 1
+          }}
+          whileHover={{
+            y: 0,
+            transition: { duration: 0.2, ease: 'linear' },
+
           }}
           className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2 flex-col duration-500 hover:shadow-blue-200 hover:shadow-2xl  hover:border-blue-300'>
           <p className='lg:text-sm md:text-sm text-xs text-gray-500 font-medium'>Contact me</p>
@@ -203,31 +261,63 @@ function App() {
 
 
         <motion.div
-          className='w-full bg-gray-100 rounded-2xl py-5 px-10  gap-6 flex flex-col   items-center  lg:mb-10 mb-5 border-gray-100 border-2 '>
-          <div className='w-full flex justify-start'><p className='text-sm text-gray-500 font-medium'>Follow me</p></div>
-          <div className='flex items-center gap-8 justify-center w-full  text-xs '>
-            <div className='flex flex-col items-center gap-0 cursor-pointer ' onClick={() => window.open('https://www.instagram.com/__mohd_zafeer__/')}>
+          className='w-full bg-gray-100 rounded-2xl py-5 px-10 gap-6 flex flex-col items-center lg:mb-10 mb-5 border-gray-100 border-2'>
+
+          <div className='w-full flex justify-start'>
+            <p className='text-sm text-gray-500 font-medium'>Follow me</p>
+          </div>
+
+          <div className='flex items-center gap-8 justify-center w-full text-xs'>
+
+            {/* Instagram */}
+            <div className='relative flex flex-col items-center gap-0 cursor-pointer group'
+              onClick={() => window.open('https://www.instagram.com/__mohd_zafeer__/')}>
               <FaInstagram className='h-12 cursor-pointer lg:text-2xl text-lg' />
               <p className='text-gray-500 font-medium cursor-pointer hover:text-gray-600 duration-200'>Instagram</p>
+              <span className='absolute bottom-14 text-white bg-black text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 whitespace-nowrap'>
+                Follow on Instagram
+              </span>
             </div>
-            <div className='flex flex-col items-center gap-0 cursor-pointer' onClick={() => window.open('https://github.com/mohdzafeer')}>
+
+            {/* GitHub */}
+            <div className='relative flex flex-col items-center gap-0 cursor-pointer group'
+              onClick={() => window.open('https://github.com/mohdzafeer')}>
               <SiGithub className='h-12 cursor-pointer lg:text-2xl text-lg' />
               <p className='text-gray-500 font-medium cursor-pointer hover:text-gray-600 duration-200'>Github</p>
+              <span className='absolute bottom-14 text-white bg-black text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 whitespace-nowrap'>
+                View GitHub Profile
+              </span>
             </div>
-            <div className='flex flex-col items-center gap-0 cursor-pointer' onClick={() => window.open('https://www.geeksforgeeks.org/user/mohammadzafeer2610/')}>
+
+            {/* GFG */}
+            <div className='relative flex flex-col items-center gap-0 cursor-pointer group'
+              onClick={() => window.open('https://www.geeksforgeeks.org/user/mohammadzafeer2610/')}>
               <SiGeeksforgeeks className='h-12 cursor-pointer lg:text-2xl text-lg' />
               <p className='text-gray-500 font-medium cursor-pointer hover:text-gray-600 duration-200'>GFG</p>
+              <span className='absolute bottom-14 text-white bg-black text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 whitespace-nowrap'>
+                GeeksforGeeks Profile
+              </span>
             </div>
-            <div className='flex flex-col items-center gap-0 cursor-pointer' onClick={() => window.open('https://leetcode.com/u/zafeer2610/')}>
+
+            {/* LeetCode */}
+            <div className='relative flex flex-col items-center gap-0 cursor-pointer group'
+              onClick={() => window.open('https://leetcode.com/u/zafeer2610/')}>
               <SiLeetcode className='h-12 cursor-pointer lg:text-2xl text-lg' />
               <p className='text-gray-500 font-medium cursor-pointer hover:text-gray-600 duration-200'>Leetcode</p>
+              <span className='absolute bottom-14 text-white bg-black text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 whitespace-nowrap'>
+                LeetCode Profile
+              </span>
             </div>
 
           </div>
+
           <div className='justify-center'>
-            <p className='lg:text-sm text-xs text-gray-500 font-normal mt-5 text-center'>All Rights Reserved &copy; 2025 Mohammad Zafeer</p>
+            <p className='lg:text-sm text-xs text-gray-500 font-normal mt-5 text-center'>
+              All Rights Reserved &copy; 2025 Mohammad Zafeer
+            </p>
           </div>
         </motion.div>
+
 
 
       </div>
