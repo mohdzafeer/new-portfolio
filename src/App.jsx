@@ -2,6 +2,7 @@ import './App.css'
 import { SiGithub } from "react-icons/si";
 import githubContri from '/images/github-contri.jpg'
 import profile from '/images/profile.png'
+import pfpic from '/images/pfpic.jpg'
 import insta from '/images/insta.png'
 import instaProfile from '/images/insta-profile.jpg'
 import linkedin from '/images/linkedin.png'
@@ -33,7 +34,7 @@ function App() {
 
     <div className='overflow-x-hidden scroll-smooth '>
 
-      <div className='bg-white  min-w-screen min-h-screen xl:px-96 lg:px-72 px-10 md:px-20 lg:pt-10 pt-5 relative select-none '>
+      <div className='bg-white  min-w-screen min-h-screen xl:px-96 lg:px-72 px-10 md:px-20 lg:pt-10 pt-5 relative  '>
         {/* <div className='  fixed top-0 right-0 m-10 text-white' ><Switch /></div> */}
         {/* <button className=' bg-black fixed top-0 right-0 m-10 text-white px-3 py-2 rounded-lg font-bold cursor-pointer hover:bg-gray-800 duration-200' onClick={() => {setdarkMode(!darkMode),console.log(darkMode)}} >Dark Mode</button> */}
         <div className='  fixed bottom-0 right-0 m-10 text-white lg:inline-flex hidden' onClick={() => window.open('https://drive.google.com/drive/folders/1TPF0Ox6rETQhdBzs2XKuygcRGEEaf4uT?usp=drive_link')}><Button /></div>
@@ -54,19 +55,19 @@ function App() {
           }}
           className='w-full bg-blue-500 rounded-2xl py-10 lg:gap-6 gap-1 flex flex-col justify-center items-center mb-10 hover:shadow-xl hover:shadow-blue-200 duration-500'>
           {/* <div className='w-full flex justify-start'><p className='text-sm text-gray-200 font-medium ml-10'>Hello</p></div> */}
-          <div><img src={profile} alt='Profile Image' className='xl:h-60 lg:h-52 h-40' /></div>
+          <div><img src={pfpic} alt='Profile Image' className='xl:h-60 lg:h-52 h-40 rounded-full' /></div>
           <div><h1 className='font-bold xl:text-4xl lg:text-2xl text-xl text-white'>Mohammad Zafeer</h1></div>
           <div><h1 className='font-medium lg:text-xl text-sm text-white'>Software Developer and Engineer</h1></div>
         </motion.div>
 
         <motion.div
-          initial={{
-            opacity: 0
-          }}
-          animate={{
-            opacity: 1,
-            transition: { duration: 1, ease: 'easeInOut' }
-          }}
+          // initial={{
+          //   opacity: 0
+          // }}
+          // animate={{
+          //   opacity: 1,
+          //   transition: { duration: 1, ease: 'easeInOut' }
+          // }}
 
           className='w-full bg-gray-100 rounded-2xl py-10 px-10  gap-6 flex flex-col justify-center items-start lg:mb-10 mb-5 '>
           <p className='lg:text-sm md:text-sm text-xs text-gray-500 font-medium'>About me</p>
@@ -79,21 +80,21 @@ function App() {
 
         <div className='flex xl:flex-row lg:flex-col flex-col lg:gap-10 gap-5 '>
           <motion.div
-            initial={{
-              transition: { duration: 0.2 },
-              scale: 0.5,
-              opacity: 0
-            }}
-            whileInView={{
-              scale: 1,
-              transition: { duration: 0.5, ease: 'linear' },
-              opacity: 1
-            }}
-            whileHover={{
-              y: -10,
-              transition: { duration: 0.2, ease: 'linear' },
+            // initial={{
+            //   transition: { duration: 0.2 },
+            //   scale: 0.5,
+            //   opacity: 0
+            // }}
+            // whileInView={{
+            //   scale: 1,
+            //   transition: { duration: 0.5, ease: 'linear' },
+            //   opacity: 1
+            // }}
+            // whileHover={{
+            //   y: -10,
+            //   transition: { duration: 0.2, ease: 'linear' },
 
-            }}
+            // }}
             className='lg:w-xl w-full bg-black  rounded-2xl lg:py-10 lg:px-10 px-3 py-2  lg:gap-6 gap-2 flex flex-col justify-center items-center lg:mb-10 mb-0 border-2 border-gray-100 cursor-pointer duration-200 ' onClick={() => window.open('https://github.com/mohdzafeer')}>
 
             <div className='flex items-center w-full justify-between '>
@@ -112,21 +113,21 @@ function App() {
 
           <div className='flex flex-col'>
             <motion.div
-              initial={{
-                transition: { duration: 0.2 },
-                scale: 0.5,
-                opacity: 0
-              }}
-              whileInView={{
-                scale: 1,
-                transition: { duration: 0.5, ease: 'linear' },
-                opacity: 1
-              }}
-              whileHover={{
-                y: -10,
-                transition: { duration: 0.2, ease: 'linear' },
+              // initial={{
+              //   transition: { duration: 0.2 },
+              //   scale: 0.5,
+              //   opacity: 0
+              // }}
+              // whileInView={{
+              //   scale: 1,
+              //   transition: { duration: 0.5, ease: 'linear' },
+              //   opacity: 1
+              // }}
+              // whileHover={{
+              //   y: -10,
+              //   transition: { duration: 0.2, ease: 'linear' },
 
-              }}
+              // }}
               className='lg:w-xl w-full bg-white  rounded-2xl lg:h-56 h-full  lg:px-10 px-3 py-2  flex flex-col justify-center items-center lg:mb-10 mb-5 border-2 border-gray-100 cursor-pointer duration-500 hover:border-2 hover:border-blue-300 hover:bg-blue-100 hover:shadow-lg hover:shadow-blue-200' onClick={() => window.open('https://www.linkedin.com/in/mohammad-zafeer-626a63284/')}>
               <div className='flex w-full justify-between lg:items-start items-center'>
                 <div><img src={linkedin} alt='insta' className='lg:h-16 h-12' /></div>
@@ -140,21 +141,21 @@ function App() {
 
 
             <motion.div
-              initial={{
-                transition: { duration: 0.2 },
-                scale: 0.5,
-                opacity: 0
-              }}
-              whileInView={{
-                scale: 1,
-                transition: { duration: 0.5, ease: 'linear' },
-                opacity: 1
-              }}
-              whileHover={{
-                y: -10,
-                transition: { duration: 0.2, ease: 'linear' },
+              // initial={{
+              //   transition: { duration: 0.2 },
+              //   scale: 0.5,
+              //   opacity: 0
+              // }}
+              // whileInView={{
+              //   scale: 1,
+              //   transition: { duration: 0.5, ease: 'linear' },
+              //   opacity: 1
+              // }}
+              // whileHover={{
+              //   y: -10,
+              //   transition: { duration: 0.2, ease: 'linear' },
 
-              }}
+              // }}
               className='lg:w-xl w-full bg-white  rounded-2xl lg:py-5 py-2  lg:px-10 px-3  flex flex-col justify-center items-center lg:mb-10 mb-5 border-2 border-gray-100 cursor-pointer duration-500 hover:border-2 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-200 hover:bg-blue-100' onClick={() => window.location = 'mailto:mohammadzafeer2610@gmail.com'}>
               <div className='flex w-full justify-between items-center gap-6'>
                 <img src={gmail} alt='insta profile' className='lg:h-20 h-8 ' />
@@ -172,21 +173,21 @@ function App() {
           <p className='font-bold font-sans lg:text-2xl text-lg'>Experience</p>
         </div>
         <motion.div
-          initial={{
-            transition: { duration: 0.2 },
-            scale: 0.5,
-            opacity: 0
-          }}
-          whileInView={{
-            scale: 1,
-            transition: { duration: 0.5, ease: 'linear' },
-            opacity: 1
-          }}
-          whileHover={{
-            y: -10,
-            transition: { duration: 0.2, ease: 'linear' },
+          // initial={{
+          //   transition: { duration: 0.2 },
+          //   scale: 0.5,
+          //   opacity: 0
+          // }}
+          // whileInView={{
+          //   scale: 1,
+          //   transition: { duration: 0.5, ease: 'linear' },
+          //   opacity: 1
+          // }}
+          // whileHover={{
+          //   y: -10,
+          //   transition: { duration: 0.2, ease: 'linear' },
 
-          }}
+          // }}
           className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2 hover:shadow-lg hover:shadow-blue-200 duration-500 hover:border-2 hover:border-blue-300'>
           {/* <p className='font-bold font-sans text-2xl'>Experience</p> */}
           <Experience />
@@ -213,21 +214,21 @@ function App() {
         </div>
 
         <motion.div
-          initial={{
-            transition: { duration: 0.2 },
-            scale: 0.5,
-            opacity: 0
-          }}
-          whileInView={{
-            scale: 1,
-            transition: { duration: 0.5, ease: 'linear' },
-            opacity: 1
-          }}
-          whileHover={{
-            y: -10,
-            transition: { duration: 0.2, ease: 'linear' },
+          // initial={{
+          //   transition: { duration: 0.2 },
+          //   scale: 0.5,
+          //   opacity: 0
+          // }}
+          // whileInView={{
+          //   scale: 1,
+          //   transition: { duration: 0.5, ease: 'linear' },
+          //   opacity: 1
+          // }}
+          // whileHover={{
+          //   y: -10,
+          //   transition: { duration: 0.2, ease: 'linear' },
 
-          }}
+          // }}
           className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2 hover:shadow-2xl hover:shadow-blue-200 duration-500 hover:border-2 hover:border-blue-200'>
           {/* <p className='font-bold font-sans text-2xl'>Education</p> */}
           <Education />
@@ -239,21 +240,21 @@ function App() {
         </div>
 
         <motion.div
-          initial={{
-            transition: { duration: 0.2 },
-            scale: 0.5,
-            opacity: 0
-          }}
-          whileInView={{
-            scale: 1,
-            transition: { duration: 0.5, ease: 'linear' },
-            opacity: 1
-          }}
-          whileHover={{
-            y: 0,
-            transition: { duration: 0.2, ease: 'linear' },
+          // initial={{
+          //   transition: { duration: 0.2 },
+          //   scale: 0.5,
+          //   opacity: 0
+          // }}
+          // whileInView={{
+          //   scale: 1,
+          //   transition: { duration: 0.5, ease: 'linear' },
+          //   opacity: 1
+          // }}
+          // whileHover={{
+          //   y: 0,
+          //   transition: { duration: 0.2, ease: 'linear' },
 
-          }}
+          // }}
           className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2 flex-col duration-500 hover:shadow-blue-200 hover:shadow-2xl  hover:border-blue-300'>
           <p className='lg:text-sm md:text-sm text-xs text-gray-500 font-medium'>Contact me</p>
           <ContactMe />

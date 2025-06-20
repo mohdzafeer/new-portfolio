@@ -12,20 +12,20 @@ const Projects = () => {
                         return <motion.div 
                         
 
-                        initial={{
-                            transition:{duration:0.1},
-                            y:0,
-                            scale:0.7
-                        }}
-                        whileInView={{
-                            scale:1,
-                            transition:{duration:0.5, ease:'linear'}
-                        }}
-                        whileHover={{
-                            y:-10,
-                            transition:{duration:0.1 , ease:'linear'},
+                        // initial={{
+                        //     transition:{duration:0.1},
+                        //     y:0,
+                        //     scale:0.7
+                        // }}
+                        // whileInView={{
+                        //     scale:1,
+                        //     transition:{duration:0.5, ease:'linear'}
+                        // }}
+                        // whileHover={{
+                        //     y:-10,
+                        //     transition:{duration:0.1 , ease:'linear'},
                             
-                        }}
+                        // }}
                         className="w-full rounded-xl border-2 border-gray-100 py-3 m-0 flex flex-col items-center justify-center gap-6 px-3 hover:border-2 hover:bg-blue-100 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-200 duration-500 cursor-pointer">
                                 <img src={data.image} className='rounded-xl  mx-3 border-2 border-gray-200'/>
                                 <h1 className='text-lg font-bold text-center'>{data.name}</h1>
