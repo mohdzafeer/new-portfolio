@@ -5,8 +5,8 @@ import blog2 from '/images/blog2.png'
 
 const Blogs = () => {
     return (
-        <div className='flex gap-6 flex-col lg:flex-row'>
-            <div className='p-2 rounded-xl border-2 border-gray-100 lg:w-sm w-xs hover:bg-blue-100 hover:border-2 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-200 duration-500  active:bg-blue-100 flex flex-col items-center justify-around'>
+        <div className='flex gap-6 flex-col items-center lg:flex-row'>
+            <div className='p-2 rounded-xl border-2 border-gray-100 lg:w-sm w-xs  hover:bg-blue-100 hover:border-2 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-200 duration-500  active:bg-blue-100 flex flex-col items-center justify-around'>
 
                 <img src={blog1} alt='blog1' className='rounded-xl w-full shadow-xl' />
                 <h2 className='font-bold text-xl text-center text-gray-600 mt-5'>Top 5 Social Engineering Techniques every Developer should know</h2>
