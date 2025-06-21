@@ -20,6 +20,7 @@ import ContactMe from './components/projects/ContactMe';
 import { motion } from 'motion/react'
 import Skill from './components/Skills/Skill';
 import { easeIn } from 'motion';
+import Blogs from './components/Blogs/blogs';
 
 
 
@@ -207,6 +208,13 @@ function App() {
 
         <div className='lg:mb-10 mb-5'>
           <Skill />
+        </div>
+
+        <div className='w-full bg-white rounded-2xl py-5 px-10  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2'>
+          <p className='font-bold font-sans lg:text-2xl text-lg'>Blogs</p>
+        </div>
+        <div className='lg:mb-10 mb-5'>
+          <Blogs />
         </div>
 
         <div className='w-full bg-white rounded-2xl lg:py-5 py-3 lg:px-10 px-5  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2'>
