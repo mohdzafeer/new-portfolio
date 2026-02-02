@@ -21,7 +21,7 @@ import { motion } from 'motion/react'
 import Skill from './components/Skills/Skill';
 import { easeIn } from 'motion';
 import Blogs from './components/Blogs/blogs';
-
+import { FaLocationDot } from "react-icons/fa6";
 
 
 function App() {
@@ -54,8 +54,9 @@ function App() {
             transition: { duration: 0.2, ease: 'linear' },
 
           }}
-          className='w-full bg-blue-500 rounded-2xl py-10 lg:gap-6 gap-1 flex flex-col justify-center items-center mb-10 hover:shadow-xl hover:shadow-blue-200 duration-500'>
+          className='w-full bg-blue-500 rounded-2xl pb-10 pt-0 lg:gap-6 gap-1 flex flex-col justify-center items-center mb-10 hover:shadow-xl hover:shadow-blue-200 duration-500'>
           {/* <div className='w-full flex justify-start'><p className='text-sm text-gray-200 font-medium ml-10'>Hello</p></div> */}
+          <div className='text-right w-full p-5 mt-0 flex justify-end gap-2 text-white'><FaLocationDot/><p className='text-xs text-white font-medium'>Sharjah, UAE</p></div>
           <div><img src={pfpic} alt='Profile Image' className='xl:h-60 lg:h-52 h-40 rounded-full' /></div>
           <div><h1 className='font-bold xl:text-4xl lg:text-2xl text-xl text-white'>Mohammad Zafeer</h1></div>
           <div><h1 className='font-medium lg:text-xl text-sm text-white'>Software Developer and Engineer</h1></div>
