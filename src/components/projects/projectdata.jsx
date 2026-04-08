@@ -7,9 +7,17 @@ import cryptofriend from '/images/cryptofriend.png'
 import npm from '/images/npm.png'
 import handimart from '/images/handimart.jpg'
 import portfolio from '/images/portfolio.png'
+import QESPL from '/images/QESPL.png'
 
 
 export const projectdata=[
+    {
+        image:QESPL,
+        name:'PO Management System',
+        desc:'Full Stack Purchase Order management system using React.JS Redux Node.JS Express.JS and MongoDB deployed on Vercel and Render',
+        link:'https://qespl-frontend.vercel.app/',
+        techUsed:"React.JS Redux Tailwind Node.JS Express.JS MongoDB"
+    },
     {
         image:twitter,
         name:'Twitter Clone(with Add ons)',
