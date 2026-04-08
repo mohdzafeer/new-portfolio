@@ -87,7 +87,7 @@ function App() {
 
             className='w-full bg-gray-100 rounded-2xl py-10 px-10  gap-6 flex flex-col justify-center items-start lg:mb-10 mb-5 '>
             <p className='lg:text-sm md:text-sm text-xs text-gray-500 font-medium'>About me</p>
-            <p className='font-medium lg:text-lg text-sm font-sans'>I am a Full-Stack MERN Developer passionate about building dynamic, scalable, and user-friendly web applications. With expertise in React.js, Node.js, Express.js, and MongoDB, I develop seamless front-end experiences and robust back-end architectures. My skills extend to authentication (JWT, Firebase, Next-Auth), payment integration (Stripe), and real-time features using WebSockets and Firebase. I have worked on diverse projects, including social media platforms, e-commerce sites, and Chrome extensions, always focusing on clean, maintainable code and intuitive user experiences.</p>
+            <p className='font-medium lg:text-lg text-sm font-sans text-justify'>I am a Full-Stack MERN Developer passionate about building dynamic, scalable, and user-friendly web applications. With expertise in React.js, Node.js, Express.js, and MongoDB, I develop seamless front-end experiences and robust back-end architectures. My skills extend to authentication (JWT, Firebase, Next-Auth), payment integration (Stripe), and real-time features using WebSockets and Firebase. I have worked on diverse projects, including social media platforms, e-commerce sites, and Chrome extensions, always focusing on clean, maintainable code and intuitive user experiences.</p>
           </motion.div>
 
           <div className='w-full bg-white rounded-2xl lg:py-5 lg:px-10 px-5 py-3  gap-6 flex  justify-start  lg:mb-10 mb-5 border-gray-100 border-2'>
