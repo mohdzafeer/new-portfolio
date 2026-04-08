@@ -37,7 +37,7 @@ function App() {
 
     <div>
 
-      <div className="fixed inset-0 -z-10 pointer-events-none">
+      <div className="fixed inset-0 -z-10 pointer-events-none opacity-35">
         <ParticlesBackground
           colors={['#0000FF', '#ff00ff', '#FF0000']}
           size={4}
